@@ -19,4 +19,4 @@ from django.urls import path, re_path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path('', include('persona.urls')),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
